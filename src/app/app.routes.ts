@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './auth/login/login.component';
 import { LayoutComponent } from './shared/layout/layout.component';
@@ -8,6 +8,7 @@ import { ClaimListComponent } from './employee/claim-list/claim-list.component';
 import { ApprovedClaimsComponent } from './employee/approved-claims/approved-claims.component';
 import { EmployeeClaimsComponent } from './admin/employee-claims/employee-claims.component';
 import { ClaimAssignmentComponent } from './admin/claim-assignment/claim-assignment.component';
+import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,3 +28,8 @@ export const routes: Routes = [
     ],
   },
 ];
+@NgModule({
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  exports: [RouterModule],
+})
+export class AppRoutes {}
