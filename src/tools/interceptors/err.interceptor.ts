@@ -1,6 +1,7 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { catchError, throwError } from 'rxjs';
-import { AlertService } from '../tools/services/alert.service';
+import { AlertService } from '../services/alert.service';
+
 
 
 export const errInterceptor: HttpInterceptorFn = (req, next) => {

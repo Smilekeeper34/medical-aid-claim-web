@@ -1,0 +1,83 @@
+<div class="body-container">
+  <div class="container-fluid">
+    <div class="card" style="border-left: 3px solid rgb(133, 42, 194)">
+      <div class="card-body">
+        <h5 class="card-title fw-semibold mb-4">Make A Claim</h5>
+        <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="mb-3">
+                <label for="patientEmail" class="form-label"
+                  >Employee Email</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="patientEmail"
+                  aria-describedby="patientEmailHelp"
+                  formControlName="employeeEmail"
+                />
+                <div id="patientEmailHelp" class="form-text">
+                  Enter the email of the Employee
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="mb-3">
+                <label for="patientEmail" class="form-label"
+                  >Patient Email</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="patientEmail"
+                  aria-describedby="patientEmailHelp"
+                  formControlName="patientEmail"
+                />
+                <div id="patientEmailHelp" class="form-text">
+                  Enter the email of the patient
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-5">
+              <div class="mb-3">
+                <label for="address" class="form-label"
+                  >Address of Patient</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  aria-describedby="addressHelp"
+                  formControlName="address"
+                />
+                <div id="addressHelp" class="form-text">
+                  Enter the address of the patient
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-10">
+              <div class="mb-3">
+                <label for="productDescription" class="form-label"
+                  >Illness Description</label
+                >
+                <textarea
+                  class="form-control"
+                  id="productDescription"
+                  rows="3"
+                  formControlName="description"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

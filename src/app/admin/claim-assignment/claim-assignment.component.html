@@ -1,0 +1,51 @@
+<div class="body-container">
+    <div class="container-fluid">
+      <div class="card" style="border-left: 3px solid rgb(133, 42, 194)">
+        <div class="card-body">
+          <h5 class="card-title fw-semibold mb-4">Assign Doctor To A Claim</h5>
+          <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="mb-3">
+                  <label for="patientEmail" class="form-label"
+                    >Doctor Email</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="patientEmail"
+                    aria-describedby="patientEmailHelp"
+                    formControlName="employeeEmail"
+                  />
+                  <div id="patientEmailHelp" class="form-text">
+                    Enter the email of the Doctor
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="mb-3">
+                  <label for="patientEmail" class="form-label"
+                    >Claim Number</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="patientEmail"
+                    aria-describedby="patientEmailHelp"
+                    formControlName="patientEmail"
+                  />
+                  <div id="patientEmailHelp" class="form-text">
+                    Enter the claim number 
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+           
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

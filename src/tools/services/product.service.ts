@@ -8,8 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class ProductService {
 
-  private apiUrl = 'https://econimic-pricing.onrender.com/api/v1/product/list';
-  private salesUrl ='https://econimic-pricing.onrender.com/api/v1/sales/list';
+  private apiUrl = 'https://claims-ef0j.onrender.com/api/v1/claims/list';
+  private salesUrl ='https://claims-ef0j.onrender.com/api/v1/claims/list';
   constructor(private http: HttpClient) { }
 
   getProductList(): Observable<any> {

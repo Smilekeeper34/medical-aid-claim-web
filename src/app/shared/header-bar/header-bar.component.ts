@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { AuthService } from '../../tools/services/auth.service';
+import { AuthService } from '../../../tools/services/auth.service';
+
 
 @Component({
   selector: 'app-header-bar',

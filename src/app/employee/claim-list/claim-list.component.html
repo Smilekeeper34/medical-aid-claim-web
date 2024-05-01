@@ -1,0 +1,89 @@
+<div class="body-container">
+  <div class="container-fluid" style="margin-top: 2%">
+    <div class="row">
+      <div class="col-lg-12 d-flex align-items-stretch">
+        <div class="card w-100">
+          <div class="card-body p-4">
+            <h5 class="card-title fw-semibold mb-4">List of Claims</h5>
+            <div class="table-responsive">
+              <table class="table text-nowrap mb-0 align-middle">
+                <thead class="text-dark fs-4">
+                  <tr>
+                    <th class="border-bottom-0">
+                      <h6 class="fw-semibold mb-0">Claim Number</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                      <h6 class="fw-semibold mb-0">Patient Address</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                      <h6 class="fw-semibold mb-0">Date of Incident</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                      <h6 class="fw-semibold mb-0">Description</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                      <h6 class="fw-semibold mb-0">Patient Email</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                      <h6 class="fw-semibold mb-0">Status</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                      <h6 class="fw-semibold mb-0">Approved Doctor Email</h6>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let product of products">
+                    <td class="border-bottom-0">
+                      <h6 class="fw-semibold mb-0">
+                        {{ product.claimNumber }}
+                      </h6>
+                    </td>
+                    <td class="border-bottom-0">
+                      <span class="fw-normal">{{ product.address }}</span>
+                    </td>
+                    <td class="border-bottom-0">
+                      <p class="mb-0 fw-normal">
+                        {{ product.dateOfIncident | date : "medium" }}
+                      </p>
+                    </td>
+                    <td class="border-bottom-0">
+                      <p class="mb-0 fw-normal">{{ product.description }}</p>
+                    </td>
+                    <td class="border-bottom-0">
+                      <h6 class="fw-semibold mb-0 fs-4">
+                        {{ product.patientEmail }}
+                      </h6>
+                    </td>
+                    <td class="border-bottom-0">
+                      <div class="d-flex align-items-center gap-2">
+                        <span
+                          [ngClass]="{
+                            'badge fw-semibold rounded-pill': true,
+                            'bg-success': product.status === 'APPROVED',
+                            'bg-warning': product.status === 'PENDING',
+                            'bg-info': product.status === 'SEND_TO_DR',
+                            'bg-primary':
+                              product.status === 'SEND_BACK_TO_ADMIN',
+                            'bg-danger': product.status === 'NOT_APPROVED'
+                          }"
+                          >{{ product.status }}</span
+                        >
+                      </div>
+                    </td>
+
+                    <td class="border-bottom-0">
+                      <h6 class="fw-semibold mb-0 fs-4">
+                        {{ product.approvedDrEmail }}
+                      </h6>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
