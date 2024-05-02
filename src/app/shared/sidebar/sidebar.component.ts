@@ -14,7 +14,7 @@ import { AuthService } from '../../../tools/services/auth.service';
 })
 export class SidebarComponent implements OnInit {
   sideData = sideData;
-  constructor(public auth: AuthService){}
+  constructor(public authService: AuthService){}
   
   ngOnInit(): void {
       
