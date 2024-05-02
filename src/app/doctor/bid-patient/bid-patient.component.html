@@ -1,0 +1,90 @@
+<div class="body-container">
+    <div class="container-fluid">
+      <div class="card" style="border-left: 3px solid rgb(133, 42, 194)">
+        <div class="card-body">
+          <h5 class="card-title fw-semibold mb-4">Assign Doctor To A Claim</h5>
+          <form [formGroup]="setPriceForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="mb-3">
+                  <label for="patientEmail" class="form-label"
+                    >Doctor Email</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="patientEmail"
+                    aria-describedby="patientEmailHelp"
+                    formControlName="drEmail"
+                  />
+                  <div id="patientEmailHelp" class="form-text">
+                    Enter the email of the Doctor
+                  </div>
+                </div>
+              </div>
+               
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="mb-3">
+                      <label for="patientEmail" class="form-label"
+                        >Currency</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="patientEmail"
+                        aria-describedby="patientEmailHelp"
+                        formControlName="currency"
+                      />
+                      <div id="patientEmailHelp" class="form-text">
+                        Enter the Currency
+                      </div>
+                    </div>
+                  </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="patientEmail" class="form-label"
+                        >Amount</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="patientEmail"
+                        aria-describedby="patientEmailHelp"
+                        formControlName="proposedAmount"
+                      />
+                      <div id="patientEmailHelp" class="form-text">
+                        Enter the Amount
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="patientEmail" class="form-label"
+                        >Description of Services Offered</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="patientEmail"
+                        aria-describedby="patientEmailHelp"
+                        formControlName="description"
+                      />
+                      <div id="patientEmailHelp" class="form-text">
+                       
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            
+           
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

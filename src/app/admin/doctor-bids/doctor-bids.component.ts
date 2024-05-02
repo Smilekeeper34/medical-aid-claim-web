@@ -5,16 +5,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-doctor-claims',
+  selector: 'app-doctor-bids',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule,FormsModule],
-  templateUrl: './doctor-claims.component.html',
-  styleUrl: './doctor-claims.component.scss'
+  imports: [CommonModule,FormsModule,ReactiveFormsModule],
+  templateUrl: './doctor-bids.component.html',
+  styleUrl: './doctor-bids.component.scss'
 })
-export class DoctorClaimsComponent {
+export class DoctorBidsComponent {
   products: any[] = [];
-  statusList: string[] = ['SEND_TO_DR'];
-  selectedStatus: string = 'SEND_TO_DR';
+  statusList: string[] = ['SEND_BACK_TO_ADMIN'];
+  selectedStatus: string = 'SEND_BACK_TO_ADMIN';
   dataAvailable: boolean = true; // Property to track data availability
 
   constructor(private http: HttpClient,private router: Router) {}
@@ -38,8 +38,5 @@ export class DoctorClaimsComponent {
     this.selectedStatus = selectedValue;
     this.fetchData();
   }
-  onSetPrice(claimNumber: string) {
-    // Pass claim number to another component using router navigation
-    this.router.navigate(['admin/set-prices'], { queryParams: { claimNumber: claimNumber } });
-  }
+  
 }

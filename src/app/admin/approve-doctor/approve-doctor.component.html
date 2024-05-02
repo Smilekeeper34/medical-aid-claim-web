@@ -1,6 +1,6 @@
 <!-- Status Selection Form -->
 <!-- Status Selection Form -->
-<div class="card">
+<!-- <div class="card">
     <div class="mb-4">
       <label for="statusSelect" class="form-label">Select Status:</label>
       <select
@@ -8,13 +8,13 @@
         id="statusSelect"
         (change)="onStatusChange($event)"
       >
-        <!-- Populate options dynamically with statusList -->
+      
         <option *ngFor="let status of statusList" [value]="status">
           {{ status }}
         </option>
       </select>
     </div>
-  </div>
+  </div> -->
   
   <!-- Display message if no data is available -->
   <div *ngIf="!dataAvailable" class="alert alert-warning" role="alert">

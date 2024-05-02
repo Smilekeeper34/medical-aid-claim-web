@@ -77,32 +77,7 @@
               <span class="hide-menu">Claim List</span>
             </a>
           </li>
-          <li class="sidebar-item">
-            <a
-              class="sidebar-link"
-              routerLink="approved"
-              aria-expanded="false"
-              routerLinkActive="active"
-            >
-              <span>
-                <i class="lni lni-layers"></i>
-              </span>
-              <span class="hide-menu">Approved Claims</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a
-              class="sidebar-link"
-              routerLink="employee-claims"
-              aria-expanded="false"
-              routerLinkActive="active"
-            >
-              <span>
-                <i class="lni lni-layers"></i>
-              </span>
-              <span class="hide-menu">Employee Claims</span>
-            </a>
-          </li>
+          
           <li class="nav-small-cap">
             <i class="lni lni-grid-alt nav-small-cap-icon fs-4"></i>
             <span class="hide-menu">Doctor Panel</span>
@@ -110,6 +85,37 @@
           <li class="sidebar-item">
             <a
               class="sidebar-link"
+              routerLink="patient-claims"
+              aria-expanded="false"
+              routerLinkActive="active"
+            >
+              <span>
+                <i class="lni lni-layers"></i>
+              </span>
+              <span class="hide-menu">Patient Claims</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a
+              class="sidebar-link"
+              routerLink="set-prices"
+              aria-expanded="false"
+              routerLinkActive="active"
+            >
+              <span>
+                <i class="lni lni-layers"></i>
+              </span>
+              <span class="hide-menu">Bid a Patient</span>
+            </a>
+          </li>
+          <li class="nav-small-cap" >
+            <i class="lni lni-grid-alt nav-small-cap-icon fs-4"></i>
+            <span class="hide-menu">Admin</span>
+          </li>
+          
+          <li class="sidebar-item">
+            <a
+              class="sidebar-link"
               routerLink="employee-claims"
               aria-expanded="false"
               routerLinkActive="active"
@@ -119,10 +125,6 @@
               </span>
               <span class="hide-menu">Employee Claims</span>
             </a>
-          </li>
-          <li class="nav-small-cap">
-            <i class="lni lni-grid-alt nav-small-cap-icon fs-4"></i>
-            <span class="hide-menu">Claims</span>
           </li>
           <li class="sidebar-item">
             <a
@@ -134,7 +136,46 @@
               <span>
                 <i class="lni lni-add-files"></i>
               </span>
-              <span class="hide-menu">Assign A Claim</span>
+              <span class="hide-menu">Assign A Claim to Doctor</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a
+              class="sidebar-link"
+              routerLink="doctor-bids"
+              aria-expanded="false"
+              routerLinkActive="active"
+            >
+              <span>
+                <i class="lni lni-add-files"></i>
+              </span>
+              <span class="hide-menu">Claims from Doctors</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a
+              class="sidebar-link"
+              routerLink="doctor-claims"
+              aria-expanded="false"
+              routerLinkActive="active"
+            >
+              <span>
+                <i class="lni lni-add-files"></i>
+              </span>
+              <span class="hide-menu">Doctor Bids</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a
+              class="sidebar-link"
+              routerLink="approve-doctor"
+              aria-expanded="false"
+              routerLinkActive="active"
+            >
+              <span>
+                <i class="lni lni-add-files"></i>
+              </span>
+              <span class="hide-menu">Approve Doctor </span>
             </a>
           </li>
           

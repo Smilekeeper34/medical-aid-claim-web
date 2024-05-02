@@ -5,13 +5,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-doctor-claims',
+  selector: 'app-approve-doctor',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule,FormsModule],
-  templateUrl: './doctor-claims.component.html',
-  styleUrl: './doctor-claims.component.scss'
+  imports: [CommonModule,FormsModule,ReactiveFormsModule],
+  templateUrl: './approve-doctor.component.html',
+  styleUrl: './approve-doctor.component.scss'
 })
-export class DoctorClaimsComponent {
+export class ApproveDoctorComponent {
   products: any[] = [];
   statusList: string[] = ['SEND_TO_DR'];
   selectedStatus: string = 'SEND_TO_DR';

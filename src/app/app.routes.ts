@@ -9,6 +9,13 @@ import { ApprovedClaimsComponent } from './employee/approved-claims/approved-cla
 import { EmployeeClaimsComponent } from './admin/employee-claims/employee-claims.component';
 import { ClaimAssignmentComponent } from './admin/claim-assignment/claim-assignment.component';
 import { NgModule } from '@angular/core';
+import { DoctorClaimsComponent } from './doctor/doctor-claims/doctor-claims.component';
+import { BidPatientComponent } from './doctor/bid-patient/bid-patient.component';
+import { DoctorBidsComponent } from './admin/doctor-bids/doctor-bids.component';
+import { ApproveDoctorComponent } from './admin/approve-doctor/approve-doctor.component';
+import { DoctorBidsClaimComponent } from './admin/doctor-bids-claim/doctor-bids-claim.component';
+import { RoleGuard } from '../tools/services/role.guard';
+// import { RoleGuard } from '../tools/services/role.guard';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,6 +24,7 @@ export const routes: Routes = [
   {
     path: 'admin',
     component: LayoutComponent,
+    // canActivate: [RoleGuard] ,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
@@ -25,9 +33,15 @@ export const routes: Routes = [
       { path: 'approved', component: ApprovedClaimsComponent },
       { path: 'employee-claims', component: EmployeeClaimsComponent },
       { path: 'assign-claim', component: ClaimAssignmentComponent },
+      { path: 'patient-claims', component: DoctorClaimsComponent },
+      { path: 'set-prices', component: BidPatientComponent},
+      { path: 'doctor-bids', component: DoctorBidsComponent},
+      { path: 'approve-doctor', component: ApproveDoctorComponent},
+      { path: 'doctor-claims', component: DoctorBidsClaimComponent},
     ],
   },
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
