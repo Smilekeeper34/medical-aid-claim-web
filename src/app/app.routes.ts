@@ -14,7 +14,7 @@ import { BidPatientComponent } from './doctor/bid-patient/bid-patient.component'
 import { DoctorBidsComponent } from './admin/doctor-bids/doctor-bids.component';
 import { ApproveDoctorComponent } from './admin/approve-doctor/approve-doctor.component';
 import { DoctorBidsClaimComponent } from './admin/doctor-bids-claim/doctor-bids-claim.component';
-import { RoleGuard } from '../tools/services/role.guard';
+
 // import { RoleGuard } from '../tools/services/role.guard';
 
 export const routes: Routes = [
